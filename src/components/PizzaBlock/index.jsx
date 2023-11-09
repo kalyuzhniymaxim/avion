@@ -1,30 +1,31 @@
-import React, {useState} from "react";
+import React, { useState } from 'react';
 
-
-
-function PizzaBlockList({title, price, image}) {
-
+function PizzaBlockList({ title, price, imageUrl, sizes, types }) {
+  const typesName = ['тонкие', 'традиционные'];
+  const [activSizes, setActivSizes] = useState(0);
+  const [activeTypes, setActiveTypes] = useState(0);
 
   return (
     <div className="pizza-block">
-      <img
-        className="pizza-block__image"
-        src={image}
-        alt="Pizza"
-      />
+      <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
       <h4 className="pizza-block__title">{title}</h4>
       <div className="pizza-block__selector">
         <ul>
-          <li className="active">тонкое</li>
-          <li>традиционное</li>
+          {types.map((type, i) => (
+            <li key={i} onClick={() => setActiveTypes(i)} className={activeTypes === i ? 'active' : ''}>
+              {typesName[type]}
+            </li>
+          ))}
         </ul>
         <ul>
-          <li className="active">26 см.</li>
-          <li>30 см.</li>
-          <li>40 см.</li>
+          {sizes.map((size, i) => (
+            <li key={i} onClick={() => setActivSizes(i)} className={activSizes === i ? 'active' : ' '}>
+              {size} см
+            </li>
+          ))}
         </ul>
       </div>
-      <div  className="pizza-block__bottom">
+      <div className="pizza-block__bottom">
         <div className="pizza-block__price">от {price} ₽</div>
         <div className="button button--outline button--add">
           <svg
@@ -46,4 +47,4 @@ function PizzaBlockList({title, price, image}) {
   );
 }
 
-export default PizzaBlockList
+export default PizzaBlockList;
