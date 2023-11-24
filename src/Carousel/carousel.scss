@@ -1,0 +1,43 @@
+.card{
+    background-color: rgb(213, 213, 213);
+    height: 300px;
+    width: 500px;
+    // margin: 10px;
+}
+.slick-slider .slick-list{
+    // background-color: aquamarine;
+    // height: 300px;
+    // margin: 10px;
+    
+}
+.cardd{
+    display: none;
+}
+.cardd div div div div div{
+    // margin: 10px;
+    margin: 0 10px;
+    h3{
+        color: blue;
+    }
+    h1,h3{
+        font-size: 35px;
+        text-align: center;
+        padding-top: 30px;
+    }
+    p{
+        padding-top: 30px;
+        text-align: center;
+    }
+.center{
+    background-color: brown;
+}
+}
+@media(max-width: 600px){
+    .cardd{
+        display: block;
+    }
+}
+
+
+
+
