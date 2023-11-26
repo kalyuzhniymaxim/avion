@@ -46,7 +46,7 @@ const Home = () => {
 
     axios
       .get(
-        `https://654c9ff077200d6ba8591d04.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${order}${search}`,
+        `https://65465230fe036a2fa95583da.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${order}${search}`,
       )
       .then((res) => {
         setItems(res.data);
