@@ -102,6 +102,7 @@ const Home = () => {
       <div className="content__items">{isLoading ? skeletons : pizzas}</div>
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
       <CenterMode />
+      {/* <Carousel /> */}
     </div>
   );
 };
