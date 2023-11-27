@@ -12,7 +12,7 @@ body {
   height: 100%;
   background-color: #fff;
   margin: 50px auto;
-  border-radius: 10px;
+  // border-radius: 10px;
   max-width: 1400px;
 
   @media (max-width: 645px) {
@@ -20,7 +20,12 @@ body {
     margin-top: 15px;
   }
 }
+.hedear__img{
 
+    width: 100%;
+
+
+}
 .content {
   padding: 40px 0;
 

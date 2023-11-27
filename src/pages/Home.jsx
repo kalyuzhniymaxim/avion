@@ -9,12 +9,14 @@ import Categories from '../components/Categories';
 import Sort, { list } from '../components/Sort';
 import PizzaBlock from '../components/PizzaBlock';
 import Skeleton from '../components/PizzaBlock/Skeleton';
+// import Search from '../components/Search';
 
-// import '../scss/app.scss';
+import '../scss/app.scss';
 
 import Pagination from '../components/Pagination';
 import { SearchContext } from '../App';
 import CenterMode from '../Carousel';
+import headerImg from '../assets/img/header.jpg'
 
 const Home = () => {
   const navigate = useNavigate();
@@ -94,15 +96,20 @@ const Home = () => {
   const skeletons = [...Array(6)].map((_, index) => <Skeleton key={index} />);
   return (
     <div className="container">
+    <img className='hedear__img' src={headerImg} alt="" />
+    <CenterMode />
+    {/* <Search /> */}
       <div className="content__top">
+      
+      
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
         <Sort />
       </div>
       <h2 className="content__title">Все пиццы</h2>
       <div className="content__items">{isLoading ? skeletons : pizzas}</div>
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
-      <CenterMode />
-      {/* <Carousel /> */}
+      
+      
     </div>
   );
 };
