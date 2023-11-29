@@ -30,7 +30,7 @@ if(window.confirm('Вы хотите удалить товар?')){
         <img
           className="pizza-block__image"
           src={imageUrl}
-          alt="Pizza"
+          alt=""
         />
       </div>
       <div className="cart__item-info">

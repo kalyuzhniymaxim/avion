@@ -9,7 +9,7 @@ import Categories from '../components/Categories';
 import Sort, { list } from '../components/Sort';
 import PizzaBlock from '../components/PizzaBlock';
 import Skeleton from '../components/PizzaBlock/Skeleton';
-// import Search from '../components/Search';
+import Reviews from '../components/Reviews' 
 
 import '../scss/app.scss';
 
@@ -54,7 +54,7 @@ const Home = () => {
         setItems(res.data);
         setIsLoading(false);
       });
-    window.scrollTo(0, 0);
+    // window.scrollTo(1800, 1800);
   };
   // если был первый рендерб, то проверяем URL -параметры и сохраняем в редуксе
   useEffect(() => {
@@ -109,7 +109,7 @@ const Home = () => {
       <div className="content__items">{isLoading ? skeletons : pizzas}</div>
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
       
-      
+      <Reviews />
     </div>
   );
 };

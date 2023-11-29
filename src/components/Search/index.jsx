@@ -20,6 +20,10 @@ const Search = () => {
   const updateSearchValue = useCallback(
     debounce((str) => {
       setSearchValue(str);
+      window.scrollTo({
+        top: 2200,
+        behavior: "smooth"
+      });
     }, 1000),
     [],
   );

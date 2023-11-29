@@ -12,10 +12,10 @@ function Header() {
       <div className="container">
         <Link to={'/'}>
           <div className="header__logo">
-            {/* <img width="38" src={logoSvg} alt="Pizza logo" /> */}
+
             <div>
               <h1>Avion</h1>
-              {/* <p>самая вкусная пицца во вселенной</p> */}
+
             </div>
           </div>
         </Link>
@@ -54,6 +54,7 @@ function Header() {
             </svg>
             <span>{totalCount}</span>
           </Link>
+          
         </div>
       </div>
     </div>
