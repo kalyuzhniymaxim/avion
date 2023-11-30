@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import './carousel.scss';
+import style from './Carousel.module.scss';
 
 import delivery from './Delivery.svg';
 import Sprout from './Sprout.svg';
@@ -32,7 +32,7 @@ function Carousel() {
         breakpoints={{
           640: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 40,
 
           },
           900: {
@@ -48,66 +48,61 @@ function Carousel() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div>
+          <div className={style.block}>
             <img src={delivery} alt="" />
-            <h1>Next day as standard</h1>
-            <p>Order before 3pm and get your order the next day as standard</p>
+            <h1>На следующий день стандартно</h1>
+            <p>Сделайте заказ до 15:00 и получите свой заказ на следующий день в стандартной комплектации.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
+          <div className={style.block}>
             <img src={Checkmark} alt="" />
-            <h1>Made by true artisans</h1>
-            <p>Handmade crafted goods made with real passion and craftmanship</p>
+            <h1>Сделано настоящими мастерами</h1>
+            <p>Товары ручной работы, изготовленные с настоящей страстью и мастерством</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
+          <div className={style.block}>
             <img src={Purchase} alt="" />
-            <h1>Unbeatable prices</h1>
-            <p>For our materials and quality you won’t find better prices anywhere</p>
+            <h1>Непревзойденные цены</h1>
+            <p>За наши материалы и качество лучшей цены вы не найдете нигде.</p>
           </div>
         </SwiperSlide>
-
         <SwiperSlide>
-          <div>
+          <div className={style.block}>
             <img src={Sprout} alt="" />
-            <h1>Recycled packaging</h1>
-            <p>We use 100% recycled to ensure our footprint is more manageable</p>
+            <h1>Переработанная упаковка</h1>
+            <p>Мы используем 100% переработанные материалы, чтобы обеспечить более управляемый след.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
+          <div className={style.block}>
             <img src={delivery} alt="" />
-            <h1>Next day as standard</h1>
-            <p>Order before 3pm and get your order the next day as standard</p>
+            <h1>На следующий день стандартно</h1>
+            <p>Сделайте заказ до 15:00 и получите свой заказ на следующий день в стандартной комплектации.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
+          <div className={style.block}>
             <img src={Checkmark} alt="" />
-            <h1>Made by true artisans</h1>
-            <p>Handmade crafted goods made with real passion and craftmanship</p>
+            <h1>Сделано настоящими мастерами</h1>
+            <p>Товары ручной работы, изготовленные с настоящей страстью и мастерством</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
+          <div className={style.block}>
             <img src={Purchase} alt="" />
-            <h1>Unbeatable prices</h1>
-            <p>For our materials and quality you won’t find better prices anywhere</p>
+            <h1>Непревзойденные цены</h1>
+            <p>За наши материалы и качество лучшей цены вы не найдете нигде.</p>
           </div>
         </SwiperSlide>
-
         <SwiperSlide>
-          <div>
+          <div className={style.block}>
             <img src={Sprout} alt="" />
-            <h1>Recycled packaging</h1>
-            <p>We use 100% recycled to ensure our footprint is more manageable</p>
+            <h1>Переработанная упаковка</h1>
+            <p>Мы используем 100% переработанные материалы, чтобы обеспечить более управляемый след.</p>
           </div>
         </SwiperSlide>
-
-
-
       </Swiper>
     </>
   );

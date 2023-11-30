@@ -97,18 +97,18 @@ const Home = () => {
   return (
     <div className="container">
     <img className='hedear__img' src={headerImg} alt="" />
+    <h2 className="content__title">Почему
+Выбирая нас</h2>
     <CenterMode />
-    {/* <Search /> */}
+    <h2 className="content__title">Наши товары</h2>
       <div className="content__top">
-      
-      
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
         <Sort />
       </div>
-      <h2 className="content__title">Все пиццы</h2>
+      
       <div className="content__items">{isLoading ? skeletons : pizzas}</div>
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
-      
+      <h2 className="content__title">Отзывы</h2>
       <Reviews />
     </div>
   );
