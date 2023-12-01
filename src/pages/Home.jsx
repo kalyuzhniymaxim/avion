@@ -9,14 +9,15 @@ import Categories from '../components/Categories';
 import Sort, { list } from '../components/Sort';
 import PizzaBlock from '../components/PizzaBlock';
 import Skeleton from '../components/PizzaBlock/Skeleton';
-import Reviews from '../components/Reviews' 
+import Reviews from '../components/Reviews';
+import Footer from '../components/Footer';
 
 import '../scss/app.scss';
 
 import Pagination from '../components/Pagination';
 import { SearchContext } from '../App';
 import CenterMode from '../Carousel';
-import headerImg from '../assets/img/header.jpg'
+import headerImg from '../assets/img/header.jpg';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -70,7 +71,7 @@ const Home = () => {
       isSearch.current = true;
     }
   }, []);
-// если был первый рендер, то запрашиваем пиццы
+  // если был первый рендер, то запрашиваем 
   useEffect(() => {
     if (!isSearch.current) {
       fetchPizzas();
@@ -79,7 +80,7 @@ const Home = () => {
     isSearch.current = false;
   }, [categoryId, sortType, searchValue, currentPage]);
 
-  // еслли изменили параметры и был первый рендер 
+  // еслли изменили параметры и был первый рендер
   useEffect(() => {
     if (isMounted.current) {
       const quryString = qs.stringify({
@@ -95,21 +96,30 @@ const Home = () => {
   const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
   const skeletons = [...Array(6)].map((_, index) => <Skeleton key={index} />);
   return (
-    <div className="container">
-    <img className='hedear__img' src={headerImg} alt="" />
-    <h2 className="content__title">Почему
-Выбирая нас</h2>
-    <CenterMode />
-    <h2 className="content__title">Наши товары</h2>
-      <div className="content__top">
-        <Categories value={categoryId} onChangeCategory={onChangeCategory} />
-        <Sort />
+    <div className="content-wrapper">
+      <div className="container">
+        <img className="hedear__img" src={headerImg} alt="" />
+        <h2 className="content__title">Почему Выбирая нас</h2>
+        <CenterMode />
+        <h2 className="content__title">Наши товары</h2>
+        <div className="content__top">
+          <Categories value={categoryId} onChangeCategory={onChangeCategory} />
+          <Sort />
+        </div>
+
+        <div className="content__items">{isLoading ? skeletons : pizzas}</div>
+        <Pagination currentPage={currentPage} onChangePage={onChangePage} />
+        <h2 className="content__title">Отзывы</h2>
+        <div className="content-bottom">
+          <Reviews />
+        </div>
+
       </div>
-      
-      <div className="content__items">{isLoading ? skeletons : pizzas}</div>
-      <Pagination currentPage={currentPage} onChangePage={onChangePage} />
-      <h2 className="content__title">Отзывы</h2>
-      <Reviews />
+      <div className="footer">
+          <div className="container">
+          <Footer />
+          </div>
+        </div>
     </div>
   );
 };

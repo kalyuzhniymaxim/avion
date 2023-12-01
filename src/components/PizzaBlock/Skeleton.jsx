@@ -11,11 +11,11 @@ const MyLoader = () => (
     backgroundColor="#f3f3f3"
     foregroundColor="#ecebeb"
     >
-    <circle cx="138" cy="117" r="115" />
+    <rect x="0" y="13" rx="0" ry="0" width="260" height="208" /> 
     <rect x="0" y="246" rx="10" ry="10" width="280" height="27" />
-    <rect x="8" y="430" rx="10" ry="10" width="91" height="27" />
-    <rect x="123" y="421" rx="20" ry="20" width="150" height="45" />
-    <rect x="0" y="308" rx="10" ry="10" width="280" height="85" />
+    <rect x="8" y="300" rx="10" ry="10" width="91" height="27" />
+    <rect x="123" y="291" rx="20" ry="20" width="150" height="45" />
+    {/* <rect x="0" y="308" rx="10" ry="10" width="280" height="85" /> */}
   </ContentLoader>
 );
 

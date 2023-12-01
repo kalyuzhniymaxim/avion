@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { addItem } from '../../redux/slices/cartSlice';
 
-const typesName = ['тонкие', 'традиционные'];
+const typesName = ['Новые', 'Б/У'];
 
 function PizzaBlockList({ id, title, price, imageUrl, sizes, types }) {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ function PizzaBlockList({ id, title, price, imageUrl, sizes, types }) {
   const cartItem = useSelector((state) => state.cart.items.find((obj) => obj.id === id));
   const addedCount = cartItem ? cartItem.count : 0;
 
-  const [activSizes, setActivSizes] = useState(0);
+  // const [activSizes, setActivSizes] = useState(0);
   const [activeTypes, setActiveTypes] = useState(0);
   const onClickAdd = () => {
     const item = {
@@ -20,7 +20,7 @@ function PizzaBlockList({ id, title, price, imageUrl, sizes, types }) {
       price,
       imageUrl,
       type: typesName[activeTypes],
-      size: sizes[activSizes],
+      // size: sizes[activSizes],
     };
     dispatch(addItem(item));
   };
@@ -41,7 +41,7 @@ function PizzaBlockList({ id, title, price, imageUrl, sizes, types }) {
               </li>
             ))}
           </ul>
-          <ul>
+          {/* <ul>
             {sizes.map((size, i) => (
               <li
                 key={i}
@@ -50,7 +50,7 @@ function PizzaBlockList({ id, title, price, imageUrl, sizes, types }) {
                 {size} см
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
         <div className="pizza-block__bottom">
           <div className="pizza-block__price">от {price} ₽</div>

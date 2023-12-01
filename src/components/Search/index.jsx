@@ -41,7 +41,7 @@ const Search = () => {
         value={value}
         onChange={onChangeInput}
         className={styles.input}
-        placeholder="Поиск пицц ..."
+        placeholder="Поиск ..."
       />
       {value && <img onClick={onClickClear} className={styles.clearIcon} src={close} alt="close" />}
     </div>

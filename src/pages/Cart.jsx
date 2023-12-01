@@ -104,7 +104,7 @@ function Cart() {
           <div className="cart__bottom-details">
             <span>
               {' '}
-              Всего пицц: <b>{totalCount} шт.</b>{' '}
+              Всего товара: <b>{totalCount} шт.</b>{' '}
             </span>
             <span>
               {' '}
