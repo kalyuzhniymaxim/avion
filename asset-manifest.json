@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/avion/static/css/main.382e8cdb.css",
+    "main.js": "/avion/static/js/main.8a0139cf.js",
+    "static/media/68.png": "/avion/static/media/68.a97ea150056408445365.png",
+    "static/media/66.png": "/avion/static/media/66.6643422f4aeee6d3b16c.png",
+    "static/media/header.jpg": "/avion/static/media/header.3d6d47d6a899bdded129.jpg",
+    "static/media/69.png": "/avion/static/media/69.463b523376173de0d019.png",
+    "static/media/67.png": "/avion/static/media/67.e7cb8405f7e8445422b2.png",
+    "static/media/photoeditorsdk-export-fotor-bg-remover-20230718135731.png": "/avion/static/media/photoeditorsdk-export-fotor-bg-remover-20230718135731.2ab1adaa3282e550bbc3.png",
+    "static/media/empty-cart.png": "/avion/static/media/empty-cart.db905d1f4b063162f25b.png",
+    "static/media/free-icon-instagram-2111463.png": "/avion/static/media/free-icon-instagram-2111463.167e1cbb326867efc79a.png",
+    "static/media/Delivery.svg": "/avion/static/media/Delivery.e0eccfc736a8996c4198b2c97817ad05.svg",
+    "index.html": "/avion/index.html",
+    "static/media/Sprout.svg": "/avion/static/media/Sprout.551d970e40e19b993df2d80c9b47ecb4.svg",
+    "static/media/Checkmark--outline.svg": "/avion/static/media/Checkmark--outline.2c85aeacb16e423585a83f25ed2dc78a.svg",
+    "static/media/Purchase.svg": "/avion/static/media/Purchase.284c07e5f1627d6f7fbfca343ebb930e.svg",
+    "main.382e8cdb.css.map": "/avion/static/css/main.382e8cdb.css.map",
+    "main.8a0139cf.js.map": "/avion/static/js/main.8a0139cf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.382e8cdb.css",
+    "static/js/main.8a0139cf.js"
+  ]
+}
