@@ -3,7 +3,7 @@
 
 // const NotFoundBlock = () => {
 //   return (
-//     <div className={styles.root}>Ничего не найденно </div>
+//     <div className={styles.root}>Ничего не найденно блять </div>
 //   )
 // }
 
