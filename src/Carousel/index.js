@@ -25,10 +25,10 @@ function Carousel() {
         spaceBetween={30}
 
         loop={true}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        navigation={true}
+        pagination={{
+          clickable: true,
+        }}
+        // navigation={true}
         breakpoints={{
           640: {
             slidesPerView: 2,
