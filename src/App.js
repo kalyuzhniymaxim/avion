@@ -21,8 +21,8 @@ function App() {
           <Header />
           <div className="content">
             <Routes>
-              <Route path="avion" element={<Home />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="*" element={<Home />} />
+              {/* <Route path="*" element={<NotFound />} /> */}
               <Route path="/cart" element={<Cart />} />
             </Routes>
           </div>
