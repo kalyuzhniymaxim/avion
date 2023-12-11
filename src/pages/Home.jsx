@@ -94,7 +94,7 @@ const Home = () => {
   }, [categoryId, sortType, searchValue, currentPage]);
 
   const pizzas = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
-  const skeletons = [...Array(6)].map((_, index) => <Skeleton key={index} />);
+  const skeletons = [...Array(4)].map((_, index) => <Skeleton key={index} />);
   return (
     <div className="content-wrapper">
       <div className="container">
